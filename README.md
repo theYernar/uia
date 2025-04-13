@@ -16,11 +16,17 @@
 # Uia
 
 
+<p align="center">
+  <a href="ВАШ_ССЫЛКА_НА_FIGMA" target="_blank">
+    <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" width="60" height="60"/>
+    <br/>
+    <strong>🎨 Открыть дизайн в Figma</strong>
+  </a>
+</p>
+
 ## App Demo
-<div>
-<img src="https://github.com/theYernar/uia/blob/main/demo/demo1.gif" width=230 style="display:inline-block"/>
-<img src="https://github.com/theYernar/uia/blob/main/demo/demo2.gif" width=230 style="display:inline-block"/>
-<img src="https://github.com/theYernar/uia/blob/main/demo/demo3.gif" width=230 style="display:inline-block"/>
-
-
+<div align="center">
+<img src="https://github.com/theYernar/uia/blob/main/demo/demo1.gif" width=230 />
+<img src="https://github.com/theYernar/uia/blob/main/demo/demo2.gif" width=230 />
+<img src="https://github.com/theYernar/uia/blob/main/demo/demo3.gif" width=230 />
 </div>
