@@ -18,6 +18,7 @@
 Оно предназначено для пользователей, которые хотят арендовать жильё в любое время прямо со своего устройства.
 Также приложение предоставляет возможность разместить собственный отель или жильё, став арендодателем.
 
+#
 <p align="center">
   <a href="https://www.figma.com/design/Z8obEManPdMZh8dlnFElc8/uia?node-id=0-1&t=DkSFjQl0Q0nnJKsk-1" target="_blank">
     <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" width="60" height="60"/>
