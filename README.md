@@ -17,7 +17,7 @@
 
 
 <p align="center">
-  <a href="ВАШ_ССЫЛКА_НА_FIGMA" target="_blank">
+  <a href="https://www.figma.com/design/Z8obEManPdMZh8dlnFElc8/uia?node-id=0-1&t=DkSFjQl0Q0nnJKsk-1" target="_blank">
     <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" width="60" height="60"/>
     <br/>
     <strong>🎨 Открыть дизайн в Figma</strong>
