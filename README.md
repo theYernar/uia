@@ -6,12 +6,6 @@
 
 #
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Figma-%23F24E1E?style=for-the-badge&logo=figma&logoColor=white" />
-  <img src="https://img.shields.io/badge/Flutter-%2302569B?style=for-the-badge&logo=flutter&logoColor=white" />
-</p>
-
-
 
 <p align="center">
 <a href="https://flutter.dev" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="40" height="40"/> </a> 
@@ -20,3 +14,10 @@
 </p>
 
 # Uia
+
+
+## App Demo
+<div>
+<img src="" />
+
+</div>
