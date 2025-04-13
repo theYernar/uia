@@ -18,6 +18,9 @@
 
 ## App Demo
 <div>
-<img src="" />
+<img src="https://github.com/theYernar/uia/blob/main/demo/demo1.gif" width=230 style="display:inline-block"/>
+<img src="https://github.com/theYernar/uia/blob/main/demo/demo2.gif" width=230 style="display:inline-block"/>
+<img src="https://github.com/theYernar/uia/blob/main/demo/demo3.gif" width=230 style="display:inline-block"/>
+
 
 </div>
