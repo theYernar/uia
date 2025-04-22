@@ -46,7 +46,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           'Профиль',
           style: GoogleFonts.nunito(
             fontSize: 22,
-            fontWeight: FontWeight.bold
+            fontWeight: FontWeight.w600
           ),
         ),        
       ),

@@ -47,7 +47,7 @@ class _MainScreensState extends State<MainScreens> {
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          Container(color: AppColors.grey, height: 1, width: double.infinity,),
+          Container(color: AppColors.grey, height: 0.5, width: double.infinity,),
           BottomNavigationBar(
             items: [
               BottomNavigationBarItem(icon: Icon(HugeIcons.strokeRoundedHome01), label: 'Главная'),
@@ -55,6 +55,7 @@ class _MainScreensState extends State<MainScreens> {
               BottomNavigationBarItem(icon: Icon(HugeIcons.strokeRoundedFavourite), label: 'Избранные'),
               BottomNavigationBarItem(key: ValueKey('profile'), icon: Icon(HugeIcons.strokeRoundedUser), label: 'Профиль'),
             ],
+
             onTap: onTab,
             currentIndex: _selectedIndex,
             selectedItemColor: AppColors.indigo,
@@ -69,6 +70,9 @@ class _MainScreensState extends State<MainScreens> {
               fontWeight: FontWeight.w500
             ),
             type: BottomNavigationBarType.fixed,
+            // elevation: 10,
+            // landscapeLayout: BottomNavigationBarLandscapeLayout.spread,
+            useLegacyColorScheme: true,
           ),
         ],
       ),

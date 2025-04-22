@@ -16,6 +16,12 @@ class Uia extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Uia',
+
+      theme: ThemeData(
+        splashFactory: NoSplash.splashFactory,
+      ),
+
+
       routes: AppRoutes.routes,
       initialRoute: AppRoutes.onboardingScreeen,
     );
