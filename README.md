@@ -13,6 +13,7 @@
 <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a>
 </p>
 
+
 # Uia
 Это мобильное приложение для бронирования отелей, разработанное с использованием Flutter.
 Оно предназначено для пользователей, которые хотят арендовать жильё в любое время прямо со своего устройства.

@@ -1,5 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:uia/database/onboarding_pages_data.dart';
 import 'package:uia/routes/app_routes.dart';
 import 'package:uia/screens/sign_up/enter_phone_number_screen.dart';
 import 'package:uia/themes/app_colors.dart';
@@ -13,7 +16,41 @@ class OnboardingScreeen extends StatefulWidget {
 }
 
 class _OnboardingScreeenState extends State<OnboardingScreeen> {
+  late PageController _pageController;
+  int _currentIndex = 0;
+  Timer? _autoScrollTimer;
 
+  @override
+  void initState() {
+
+    super.initState();
+    _pageController = PageController();
+
+    
+    _autoScrollTimer = Timer.periodic(Duration(seconds: 4), (timer) {
+      if (_currentIndex < onboardingPagesList.length - 1) {
+        _currentIndex++;
+      } else {
+        _currentIndex = 0;
+      }
+
+      _pageController.animateToPage(
+        _currentIndex,
+        duration: Duration(milliseconds: 500),
+        curve: Curves.easeInOut,
+      );
+    });
+  }
+
+
+  @override
+  void dispose() {
+    _autoScrollTimer?.cancel(); 
+    _pageController.dispose();
+    super.dispose();
+
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,54 +62,74 @@ class _OnboardingScreeenState extends State<OnboardingScreeen> {
               child: Column(
                 children: [
                   // Person using laptop image
-                  const SizedBox(height: 140,),
-                  Image.asset('assets/images/person_using_laptop.png', width: 340,),
-                
-                  // Text
-                  const SizedBox(height: 20,),
-                  Text(
-                    'Почувствуйте себя',
-                    style: GoogleFonts.nunito(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold
-                    ),
-                  ),
-                  Text(
-                    'как дома',
-                    style: GoogleFonts.nunito(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold
-                    ),
-                  ),
-                  const SizedBox(height: 10,),
-                  Wrap(
-                    alignment: WrapAlignment.center,
+                  const SizedBox(height: 100,),
+                  SizedBox(
+                  height: 510,
+                  child: Stack(
                     children: [
-                      Text(
-                        'Наше приложение поможет ',
-                        style: GoogleFonts.nunito(
-                          color: AppColors.grey,
-                          fontSize: 18
-                        ),
+                      PageView.builder(
+                        controller: _pageController,
+                        itemCount: onboardingPagesList.length,
+                        onPageChanged: (index){
+                          setState(() {
+                            _currentIndex = index;
+                          });
+                        },
+                        itemBuilder:(context, index) {
+                          final onboardingPage = onboardingPagesList[index];
+                          return Column(
+                            children: [
+                              const SizedBox(height: 100,),
+                              Image.asset(
+                                onboardingPage.image,
+                                height: 200,
+                              ),
+                              const SizedBox(height: 30,),
+                              Text(
+                                onboardingPage.title,
+                                textAlign: TextAlign.center,
+                                style: GoogleFonts.nunito(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold
+                                ),
+                              ),
+                              const SizedBox(height: 10,),
+                              Text(
+                                onboardingPage.text,
+                                textAlign: TextAlign.center,
+                                style: GoogleFonts.nunito(
+                                  color: AppColors.grey,
+                                  fontSize: 18
+                                ),
+                              ),
+                            ],
+                          );
+                        },
                       ),
-                      Text(
-                        'вам найти',
-                        style: GoogleFonts.nunito(
-                          color: AppColors.grey,
-                          fontSize: 18
-                        ),
-                      ),
-                      Text(
-                        'не просто жилье, а настоящий дом',
-                        style: GoogleFonts.nunito(
-                          color: AppColors.grey,
-                          fontSize: 18
-                        ),
-                      ),
-                      
 
+                      Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: List.generate(
+                            onboardingPagesList.length, (index) => AnimatedContainer(
+                              duration: Duration(milliseconds: 300),
+                              margin: const EdgeInsets.symmetric(horizontal: 5),
+                              width: _currentIndex == index ? 30 : 10,
+                              height: 10,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: _currentIndex == index ? Colors.teal : Colors.grey
+                              ),
+                            )
+                        
+                            
+                          )
+                        )
+                      )
                     ],
-                  )
+                  ),
+                ),
                 ],
               ),
             )
