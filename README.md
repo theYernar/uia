@@ -28,6 +28,14 @@
   </a>
 </p>
 
+## Installation
+```
+git clone https://github.com/theYernar/uia.git
+cd uia
+flutter pub get
+flutter run
+```
+
 ## App Demo
 <div align="center">
 <img src="https://github.com/theYernar/uia/blob/main/demo/demo1.gif" width=230 />
